@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <title>Password Generator</title>
+</head>
+<body class="page__body">
+  <main class="main">
+    <div class="password">
+      <div class="box">
+        <div class="logo">
+          <h1 class="logo__text logo__text-1">Password Generator</h1>
+          <h1 class="logo__text logo__text-2">Password Generator</h1>
+          <h1 class="logo__text logo__text-3">Password Generator</h1>
+        </div>
+        <div class="box__content content">
+          <div class="content__top top-content">
+            <input class="top-content__input" id="passwordInput" type="text">
+          </div>
+          <div class="content__body body-content">
+            <p class="body-content__text">Длина пароля:</p>
+            <input class="body-content__input" id="passwordLength" value="16" type="text">
+          </div>
+          <div class="error display-none" id="errorBlock">
+            <p class="error__text" id="errorText"></p>
+          </div>
+          <div class="content__bottom bottom-content">
+            <div class="bottom-content__column">
+              <input class="bottom-content__input" id="lowercaseCharsInput" name="lowercaseChars" type="checkbox" checked>
+              <label class="bottom-content__text" for="lowercaseCharsInput">a-z</label>
+            </div>
+            <div class="bottom-content__column">
+              <input class="bottom-content__input" id="capitalCharsInput" name="capitalChars" type="checkbox" checked>
+              <label class="bottom-content__text" for="capitalCharsInput">A-Z</label>
+            </div>
+            <div class="bottom-content__column">
+              <input class="bottom-content__input" id="numbersInput" name="numbers" type="checkbox">
+              <label class="bottom-content__text" for="numbersInput">0-9</label>
+            </div>
+            <div class="bottom-content__column">
+              <input class="bottom-content__input" id="symbolInput" name="symbols" type="checkbox">
+              <label class="bottom-content__text" for="symbolInput">!@#$%^&*-_</label>
+            </div>
+          </div>
+          <button class="content__button" id="generateButton">Generate</button>
+        </div>
+      </div>
+    </div>
+    <div class="history">
+      <h2 class="history__heading">История паролей</h2>
+      <ul class="history__passwords list-reset" id="passwordsList"></ul>
+    </div>
+  </main>
+</body>
+</html>
